@@ -1,8 +1,12 @@
 package org.example.homework4;
 
 public class MinutesToYearsAndDays {
+
+    public static final int amountMinutesInYear = 365 * 24 * 60;
+    public static final int amountMinutesInMonth = 24 * 60;
+
     public static void main(String[] args) {
-        long min = 1441;
+        long min = 600000;
         printYearsAndDays(min);
     }
     private static void printYearsAndDays(long minutes) {
@@ -10,8 +14,8 @@ public class MinutesToYearsAndDays {
             System.out.println("Invalid value");
             return;
         }
-        long yy = minutes / 525600;
-        long dd = (minutes - yy * 525600) / 1440;
+        long yy = minutes / amountMinutesInYear;
+        long dd = (minutes - yy * amountMinutesInYear) / amountMinutesInMonth;
         System.out.println(minutes + " min = " + yy + " y and " + dd + " d");
     }
 }

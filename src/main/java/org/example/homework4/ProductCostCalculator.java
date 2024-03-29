@@ -10,23 +10,23 @@ public class ProductCostCalculator {
         double totalCost = calculateTotalCost(unitPrice, quantity);
         System.out.println("Total cost of the product: " + totalCost);
     }
-    public static double calculateTotalCost (double unitPrice, int quant) {
-        if (quant <= 10) {
-            return quant * unitPrice;
+    public static double calculateTotalCost (double unitPrice, int quantityOfProduct) {
+        if (quantityOfProduct <= 10) {
+            return quantityOfProduct * unitPrice;
         }
 
-        if (quant <= 20) {
-            return quant * unitPrice * 0.95;
+        if (quantityOfProduct <= 20) {
+            return quantityOfProduct * unitPrice * 0.95;
         }
 
-        if (quant <= 30) {
-            return quant * unitPrice * 0.90;
+        if (quantityOfProduct <= 30) {
+            return quantityOfProduct * unitPrice * 0.90;
         }
 
-        if (quant <= 80) {
-            return quant * unitPrice * 0.88 - quant * unitPrice * ((quant - 30) / 10) * 0.004;
+        if (quantityOfProduct <= 80) {
+            return quantityOfProduct * unitPrice * 0.88 - quantityOfProduct * unitPrice * ((quantityOfProduct - 30) / 10) * 0.004;
         }
 
-        return quant * unitPrice * 0.87;
+        return quantityOfProduct * unitPrice * 0.87;
     }
 }
