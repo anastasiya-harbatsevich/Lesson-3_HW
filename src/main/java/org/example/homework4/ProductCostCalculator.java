@@ -11,22 +11,24 @@ public class ProductCostCalculator {
         System.out.println("Total cost of the product: " + totalCost);
     }
     public static double calculateTotalCost (double unitPrice, int quantityOfProduct) {
+        double initialCost = quantityOfProduct * unitPrice;
         if (quantityOfProduct <= 10) {
-            return quantityOfProduct * unitPrice;
+            return initialCost;
         }
 
         if (quantityOfProduct <= 20) {
-            return quantityOfProduct * unitPrice * 0.95;
+            return initialCost * 0.95;
         }
 
         if (quantityOfProduct <= 30) {
-            return quantityOfProduct * unitPrice * 0.90;
+            return initialCost * 0.90;
         }
 
         if (quantityOfProduct <= 80) {
-            return quantityOfProduct * unitPrice * 0.88 - quantityOfProduct * unitPrice * ((quantityOfProduct - 30) / 10) * 0.004;
+            double discountForEveryAdditionalTenProducts = initialCost * ((quantityOfProduct - 30) / 10) * 0.004;
+            return initialCost * 0.88 - discountForEveryAdditionalTenProducts;
         }
 
-        return quantityOfProduct * unitPrice * 0.87;
+        return initialCost * 0.87;
     }
 }
