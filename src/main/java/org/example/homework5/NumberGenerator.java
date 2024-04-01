@@ -6,36 +6,28 @@ import java.util.Random;
 
 public class NumberGenerator {
     public static void main(String[] args) {
-        List<Integer> randomArray = generateRandomArray();
-        arraySum(randomArray);
+        generateRandomArray();
     }
-    public static List<Integer> generateRandomArray() {
+    public static void generateRandomArray() {
         List<Integer> array = new ArrayList<Integer>();
-        boolean flag = true;
 
-        while (flag) {
+        int sum = 0;
+        int amountOfNumbers = 0;
+        int i = 0;
+        while (true) {
             Random random = new Random();
             int randomNumber = random.nextInt(100) + 1;
+            amountOfNumbers++;
+            sum += randomNumber;
 
-            if (array.indexOf(randomNumber) >= 0) {
-                flag = false;
-            } else {
-                array.add(randomNumber);
+            if (array.contains(randomNumber)) {
+                break;
             }
+
+            array.add(randomNumber);
         }
 
-        System.out.println("Array of random generated numbers: " + array);
-
-        return array;
-    }
-
-    public static void arraySum(List<Integer> randomArray) {
-        int sum = 0;
-
-        for (int i = 0; i < randomArray.size(); i++) {
-            sum += randomArray.get(i);
-        }
-
+        System.out.println("Total amount of numbers: " + amountOfNumbers);
         System.out.println("Sum of all numbers in array: " + sum);
     }
 }
