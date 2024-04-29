@@ -23,7 +23,7 @@ public class Bedroom {
 
     public static void makeBed() {
         Bed.make();
-//        System.out.println("The bed is being made");
+        System.out.println("Bedroom -> start making the bed");
     }
 
     public Lamp getLamp() {

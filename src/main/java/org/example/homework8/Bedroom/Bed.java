@@ -6,6 +6,7 @@ public class Bed {
     private int height;
     private int sheets;
     private int quilt;
+
     public Bed(String style, int pillows, int height, int sheets, int quilt) {
         this.style = style;
         this.pillows = pillows;
@@ -19,18 +20,18 @@ public class Bed {
     }
 
     public String getStyle(){
-        return this.style;
+        return style;
     }
     public int getPillows(){
-        return this.pillows;
+        return pillows;
     }
     public int getHeight(){
-        return this.height;
+        return height;
     }
     public int getSheets(){
-        return this.sheets;
+        return sheets;
     }
     public int getQuilt(){
-        return this.quilt;
+        return quilt;
     }
 }
