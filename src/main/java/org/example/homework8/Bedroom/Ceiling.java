@@ -9,9 +9,9 @@ public class Ceiling {
     }
 
     public int getHeight(){
-        return this.height;
+        return height;
     }
     public int getPaintedColour(){
-        return this.paintedColour;
+        return paintedColour;
     }
 }
