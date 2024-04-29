@@ -8,9 +8,7 @@ public class Lamp {
 
     public Lamp(String style, boolean battery, int globRating) {
         this.style = style;
-
         this.battery = battery;
-
         this.globRating = globRating;
     }
     public static void turnOn(){
