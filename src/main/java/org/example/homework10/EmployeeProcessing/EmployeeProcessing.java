@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class EmployeeProcessing {
-        record Employee(String firstName, String lastName, String hireDate) {
+        public record Employee(String firstName, String lastName, String hireDate) {
         }
     public static void main(String[] args) {
 
