@@ -4,6 +4,15 @@ import java.util.ArrayList;
 
 public class Album {
 
+    String title;
+
+    SongList list;
+
+    public Album(String title) {
+        this.title = title;
+        this.list = new SongList(new ArrayList<Song>());
+    }
+
     class SongList {
 
         ArrayList<Song> songs;
