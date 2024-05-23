@@ -2,7 +2,7 @@ package org.example.homework11;
 
 import java.util.HashMap;
 
-public class LettersCounter {
+public class LettersCounterOld {
     public static void main(String[] args) {
         String message = "Hello world tratatatata";
         countEachLetter(message);
